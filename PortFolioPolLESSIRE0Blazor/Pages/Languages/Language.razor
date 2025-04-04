@@ -1,0 +1,30 @@
+﻿@page "/language"
+@using PortFolioPolLESSIRE0Blazor.Models;
+
+@* <h3>Languages List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Name</th>
+        <th></th>
+    </tr>
+    @foreach (LanguageModel ce in Languages)
+    {
+        <tr>
+            <td>@ce.Name</td>
+            <td><button class="btn btn-sm btm-outline-info" @onclick="() => ClickInfo(ce.Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+
+@if(SelectedId > 0)
+{
+    <LanguageDetail id="SelectedId"></LanguageDetail>
+}
+
+<hr /> *@
+
+@code {
+
+}

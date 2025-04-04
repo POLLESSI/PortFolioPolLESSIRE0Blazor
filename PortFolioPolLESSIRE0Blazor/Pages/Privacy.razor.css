@@ -1,0 +1,41 @@
+﻿h1 {
+    background-color: aqua;
+}
+
+h3 {
+    background-color: orangered;
+    color: orange;
+}
+
+h4 {
+}
+
+div {
+    background-color: rebeccapurple;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: 16%;
+    right: auto;
+    margin-left: 2%
+}
+
+    div h1 {
+        color: green;
+    }
+
+    div p {
+        background-color: orangered;
+        color: rebeccapurple;
+        padding: 4px 7px 2px 4px;
+    }
+
+        div p h2 {
+            color: firebrick;
+            padding: 4px 7px 2px 4px;
+        }
+
+        div p h3 {
+            color: darkgoldenrod;
+            padding: 4px 7px 2px 4px;
+        }

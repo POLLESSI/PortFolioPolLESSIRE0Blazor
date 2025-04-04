@@ -1,0 +1,20 @@
+﻿@inherits ExperienceDetail
+
+<h3>Experience Detail</h3>
+
+@if (CurrentExperience is not null)
+{
+    <p>Company : @CurrentExperience.Company</p>
+    <p>Position : @CurrentExperience.Position</p>
+    <p>Description : @CurrentExperience.Description</p>
+    <p>StartDate : @CurrentExperience.StartDate</p>
+    <p>EndDate : @CurrentExperience.EndDate</p>
+}
+else
+{
+    <p>Loading Experience details...</p>
+}
+
+@code {
+
+}

@@ -1,0 +1,103 @@
+﻿<h1>Nav Menu</h1>
+﻿
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Pol LESSIRE's Portfolio </a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="certification">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Certifications
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="contact">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Contacts
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="education">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Educations
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="experience">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Experiences
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="interest">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Interests
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="language">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Languages
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="project">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Projects
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="skill">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Skills
+            </NavLink>
+        </div>
+        @* <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weatherforecast">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Weather Forecasts
+            </NavLink>
+        </div> *@
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="privacy">
+                <span class="oi oi-home" aria-hidden="true"></span> Privacy Policy
+            </NavLink>
+        </div>
+        @* <div class="nav-item px-3">
+            <NavLink class="nav-link" href="chat">
+                <span class="oi oi-plus" aria-hidden="true"></span> Forum
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </NavLink>
+        </div> *@
+    </nav>
+    @* <div class="conteneur">
+        <div class="box">🐸 Élément 1</div>
+        <div class="box">🦊 Élément 2</div>
+        <div class="box">🦄 Élément 3</div>
+        <div class="box">🐶 Élément 4</div>
+        <div class="box">🐨 Élément 5</div>
+        <div class="box">🐒 Élément 6</div>
+        <div class="box">🦆 Élément 7</div>
+        <div class="box">🐙 Élément 8</div>
+        <div class="box">🐋 Élément 9</div>
+    </div> *@
+</div>
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

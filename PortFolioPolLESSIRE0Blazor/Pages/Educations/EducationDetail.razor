@@ -1,0 +1,21 @@
+﻿@inherits EducationDetail
+
+<h3>Education Detail</h3>
+
+@if (CurrentEducation is not null)
+{
+    <p>School : @CurrentEducation.School</p>
+    <p>Degree : @CurrentEducation.Degree</p>
+    <p>FieldOfStudy : @CurrentEducation.FieldOfStudy</p>
+    <p>StartDate : @CurrentEducation.StartDate</p>
+    <p>EndDate : @CurrentEducation.EndDate</p>
+    <p>Description : @CurrentEducation.Description</p>
+}
+else
+{
+    <p>Loading Education details...</p>
+}
+
+@code {
+
+}

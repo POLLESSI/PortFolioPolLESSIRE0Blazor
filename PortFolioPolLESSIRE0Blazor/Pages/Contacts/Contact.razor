@@ -1,0 +1,29 @@
+﻿@page "/contact"
+@using PortFolioPolLESSIRE0Blazor.Models;
+
+<h3>Contacts List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Name</th>
+        <th></th>
+    </tr>
+    @foreach (ContactModel ce in Contacts)
+    {
+        <tr>
+            <td>@ce.Name</td>
+            <td><button class="btn btn-sm btm-outline-info" @onclick="() => ClickInfo(ce.Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+
+@if(SelectedId > 0)
+{
+    <ContactDetail id="SelectedId"></ContactDetail>
+}
+
+<hr />
+@code {
+
+}

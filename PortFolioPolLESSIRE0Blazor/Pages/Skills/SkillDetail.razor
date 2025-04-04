@@ -1,0 +1,18 @@
+﻿@inherits SkillDetail
+
+<h3>Skill Detail</h3>
+
+@if (CurrentSkill is not null)
+{
+    <p>Name : @CurrentSkill.Name</p>
+    <p>Level : @CurrentSkill.Level</p>
+    <p>Description : @CurrentSkill.Description</p>
+}
+else
+{
+    <p>Loading Skill details...</p>
+}
+
+@code {
+
+}

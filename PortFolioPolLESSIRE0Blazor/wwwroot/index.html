@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>PortFolioPolLESSIRE0Blazor</title>
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+    
+    <!-- If you add any scoped CSS files, uncomment the following to load them
+    <link href="PortFolioPolLESSIRE0Blazor.styles.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <h2>Pol LESSIRE Portfolio'</h2>
+            <h4>WELCOME</h4>
+        </div>
+        <p>Loading...</p>
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+        
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>
