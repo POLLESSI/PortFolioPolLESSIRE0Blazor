@@ -17,7 +17,52 @@ namespace PortFolioPolLESSIRE0Blazor.Services
         {
             return await _httpClient.GetFromJsonAsync<List<LanguageModel>>("api/languages");
         }
+        public async Task<LanguageModel> GetLanguageByIdAsync(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<LanguageModel>($"api/lSSanguages/{id}");
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI
 
 

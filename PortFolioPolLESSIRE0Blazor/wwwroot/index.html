@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
+    <meta name="description" content="Pol Lessire's Portfolio , junior developer .NET, Blazor and Angular, focused cybersecurity and software architecture .">
+    <meta name="keywords" content="Blazor, .NET, développeur, cybersecurity, Angular, C#, software architecture, Pol Lessire">
+
     <title>PortFolioPolLESSIRE0Blazor</title>
     <base href="/" />
+
+    <!-- CSS -->
     <link href="css/app.css" rel="stylesheet" />
-    <link href="manifest.json" rel="manifest" />
-    
-    <!-- If you add any scoped CSS files, uncomment the following to load them
-    <link href="PortFolioPolLESSIRE0Blazor.styles.css" rel="stylesheet" /> -->
+    <link href="css/theme.css" rel="stylesheet" />
+    <link href="css/dark-theme.css" rel="stylesheet" />
+    <link href="css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <div id="app">
+        Chargement...
         <div>
-            <h2>Pol LESSIRE Portfolio'</h2>
+            <!--<h2>Pol LESSIRE Portfolio's</h2>-->
             <h4>WELCOME</h4>
         </div>
         <p>Loading...</p>
@@ -24,7 +35,6 @@
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
         <div class="loading-progress-text"></div>
-        
     </div>
 
     <div id="blazor-error-ui">
@@ -32,8 +42,163 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
-</body>
 
+    <!-- SVG de fond animé -->
+    <div class="svg-background">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop id="stop1" offset="0%" stop-color="#00fff7" />
+                    <stop id="stop2" offset="100%" stop-color="#ff00ff" />
+                </linearGradient>
+            </defs>
+            <rect width="800" height="600" fill="url(#gradient)">
+                <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="60s" repeatCount="indefinite" />
+            </rect>
+        </svg>
+    </div>
+
+    <svg class="lucide icon-hover" xmlns="http://www.w3.org/2000/svg" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M12 20l9-5-9-5-9 5 9 5z" />
+    </svg>
+
+    <div class="sphere"></div>
+    <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+
+    <div class="pyramid">
+        <div class="base"></div>
+        <div class="side side1"></div>
+        <div class="side side2"></div>
+        <div class="side side3"></div>
+        <div class="side side4"></div>
+    </div>
+
+    <div class="cone"></div>
+
+    <!-- Scripts JS personnalisés -->
+    <script src="js/parallax.js"></script> <!-- Appelé via JSInterop -->
+    <script src="js/scroll.js" defer></script>
+    <script src="js/animatedBackground.js" defer></script>
+    <script src="js/scrollInterop.js" defer></script>
+
+    <!-- Animate on scroll -->
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <!-- Smooth scroll -->
+    <script defer>
+        window.scrollToDetails = () => {
+            const details = document.getElementById("details-section");
+            if (details) {
+                details.scrollIntoView({ behavior: "smooth" });
+            }
+        };
+    </script>
+
+    <!-- Drag & drop -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".draggable-container").forEach(container => {
+                let isDragging = false, offsetX = 0, offsetY = 0;
+
+                container.addEventListener("mousedown", e => {
+                    isDragging = true;
+                    offsetX = e.clientX - container.getBoundingClientRect().left;
+                    offsetY = e.clientY - container.getBoundingClientRect().top;
+                    container.style.zIndex = "9999";
+                });
+
+                document.addEventListener("mousemove", e => {
+                    if (isDragging) {
+                        container.style.left = (e.clientX - offsetX) + "px";
+                        container.style.top = (e.clientY - offsetY) + "px";
+                    }
+                });
+
+                document.addEventListener("mouseup", () => {
+                    isDragging = false;
+                });
+            });
+        });
+    </script>
+
+    <!-- Service worker -->
+    <script defer>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+
+    <script src="js/draggable.js" defer></script>
+    <script src="js/geometryCanvas.js"></script>
+    <!-- Lancement Blazor (à la fin !) -->
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Copyrite https://github.com/POLLESSI-->

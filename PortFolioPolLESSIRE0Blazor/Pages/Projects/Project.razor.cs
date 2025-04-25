@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.SignalR.Client;
 using System.Text.Json.Serialization;
 using PortFolioPolLESSIRE0Blazor.Services;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Projects
 {
-    public partial class Project : ComponentBase
+    public partial class Project
     {
 #nullable disable
         [Inject]
@@ -37,6 +37,44 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
 
         private void ClickInfo(int id) => SelectedId = id;
-        
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

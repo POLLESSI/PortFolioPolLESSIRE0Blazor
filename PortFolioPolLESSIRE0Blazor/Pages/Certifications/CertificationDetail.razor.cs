@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Certifications
 {
-    public partial class CertificationDetail : ComponentBase
+    public partial class CertificationDetail
     {
     #nullable disable
         [Inject]
@@ -21,7 +21,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         {
             if (Id <= 0) return;
 
-            using (HttpResponseMessage message = await Client.GetAsync($"api/certification/{Id}")) 
+            using (HttpResponseMessage message = await Client.GetAsync($"api/certifications/{Id}")) 
             {
                 if (message.IsSuccessStatusCode) 
                 {
@@ -32,3 +32,51 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

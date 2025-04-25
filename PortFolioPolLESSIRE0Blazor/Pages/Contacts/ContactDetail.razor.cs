@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Contacts
 {
-    public partial class ContactDetail : ComponentBase
+    public partial class ContactDetail 
     {
     #nullable disable
         [Inject]
@@ -20,7 +20,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         private async Task GetContacts()
         {
             if (Id <= 0) return;
-            using (HttpResponseMessage message = await Client.GetAsync($"api/contact/{Id}"))
+            using (HttpResponseMessage message = await Client.GetAsync($"api/contacts/{Id}"))
             {
                 if (message.IsSuccessStatusCode)
                 {
@@ -31,3 +31,32 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

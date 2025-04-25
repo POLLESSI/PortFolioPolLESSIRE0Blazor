@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Skills
 {
-    public partial class SkillDetail : ComponentBase
+    public partial class SkillDetail
     {
     #nullable disable
         [Inject]
@@ -20,7 +20,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         private async Task GetSkills()
         {
             if (Id <= 0) return;
-            using (HttpResponseMessage message = await Client.GetAsync($"api/skill/{Id}"))
+            using (HttpResponseMessage message = await Client.GetAsync($"api/skills/{Id}"))
             {
                 if (message.IsSuccessStatusCode)
                 {
@@ -31,3 +31,36 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

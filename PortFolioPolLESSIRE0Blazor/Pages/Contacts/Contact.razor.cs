@@ -9,7 +9,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Contacts
 {
     public partial class Contact
     {
-#nullable disable
+    #nullable disable
         [Inject]
         public HttpClient Client { get; set; }  // Injection du HttpClient
         [Inject] public ContactService ContactService { get; set; }
@@ -40,3 +40,36 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Contacts
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

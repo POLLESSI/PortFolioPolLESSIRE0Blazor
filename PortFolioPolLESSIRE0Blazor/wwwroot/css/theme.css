@@ -1,0 +1,181 @@
+﻿/* Ultra Luxe Dark Mode Theme */
+
+:root {
+    --bg-color: #121212;
+    --bg-secondary: #1e1e1e;
+    --accent-color: #7f5af0;
+    --text-color: #e4e4e4;
+    --border-color: #333;
+    --highlight: #2cb67d;
+    --danger: #ff6b6b;
+    --font-main: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+    body.dark {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+:is(h1, h2, h3, h4) {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding-left:inherit;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.03);
+}
+
+th, td {
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease-in-out;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: transform 0.2s, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--highlight);
+}
+
+/* Scroll animation */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*.svg-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    perspective: 1000px;
+}*/
+/*.svg-background svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    filter: blur(8px);
+}
+.svg-background svg {
+    animation: hueShift 20s linear infinite;
+    filter: hue-rotate(0deg);
+}
+*/
+
+.svg-background svg {
+    width: 110%;
+    height: 110%;
+    transition: transform 0.1s ease-out;
+    transform-origin: center;
+    will-change: transform;
+}
+
+/*.svg-background svg:hover {
+    transform: scale(1.05);
+}*/
+
+@keyframes hueShift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//Copyrite https://github.com/POLLESSI*/

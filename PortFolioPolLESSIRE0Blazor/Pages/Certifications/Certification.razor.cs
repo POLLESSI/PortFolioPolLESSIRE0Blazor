@@ -35,8 +35,46 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Certifications
 
             await hubConnection.StartAsync();
         }
-
         private void ClickInfo(int id) => SelectedId = id;
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

@@ -3,12 +3,115 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h6>WELCOME IN MY PORTFOLIO</h6>
 
 <h2>Welcome to the</h2>
-<h1><strong>Pol LESSIRE's Portfolio</strong></h1>
+<h1><strong><strong>Pol LESSIRE</strong>'s Portfolio</strong></h1>
 <img src="" alt="" />
 
-<div class="text-center">
-    <h1 class="display-4">WELCOME</h1>
+<div class="svg-background">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                @* <stop offset="0%" stop-color="#00fff7">
+                    <animate attributeName="stop-color" values="#00fff7;#ff00ff;#00fff7" dur="10s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stop-color="#ff00ff">
+                    <animate attributeName="stop-color" values="#ff00ff;#00fff7;#ff00ff" dur="10s" repeatCount="indefinite" />
+                </stop> *@
+                <stop id="stop1" offset="0%" stop-color="#00fff7" />
+                <stop id="stop2" offset="100%" stop-color="#ff00ff" />
+            </linearGradient>
+        </defs>
+        <rect width="800" height="600" fill="url(#gradient)">
+            <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="60s" repeatCount="indefinite" />
+        </rect>
+    </svg>
 </div>
+
+<div class="orbit">
+    <div class="figurine"></div>
+</div>
+
+<canvas id="geometryCanvas" width="600" height="400" style="border:1px solid #444;"></canvas>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const svg = document.getElementById("animated-svg");
+        const rect = document.getElementById("svg-rect");
+        const stop1 = document.getElementById("stop1");
+        const stop2 = document.getElementById("stop2");
+
+        // Couleur dynamique avec teinte
+        let hue = 0;
+        setInterval(() => {
+            hue = (hue + 1) % 360;
+            const color1 = `hsl(${hue}, 100%, 60%)`;
+            const color2 = `hsl(${(hue + 120) % 360}, 100%, 60%)`;
+            stop1.setAttribute("stop-color", color1);
+            stop2.setAttribute("stop-color", color2);
+        }, 50);
+
+        // Parallax dynamique selon mouvement de souris
+        document.addEventListener("mousemove", (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+            svg.style.transform = `rotateX(${y}deg) rotateY(${x}deg) scale(1.05)`;
+        });
+
+        // On remet à zéro si souris disparait
+        document.addEventListener("mouseleave", () => {
+            svg.style.transform = "rotateX(0deg) rotateY(0deg)";
+        });
+    });
+</script>
+
+
+
+@code {
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+    #nullable disable
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initAnimatedBackground");
+        }
+    }
+
+    [Inject]
+    private IJSRuntime JS { get; set; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @* Copyrite https://github.com/POLLESSI *@

@@ -1,18 +1,45 @@
-﻿@inherits ContactDetail
-
-<h3>Contact Detail</h3>
+﻿<h3>Contact Detail</h3>
 
 @if (CurrentContact is not null)
 {
-    <p>Name : @CurrentContact.Name</p>
-    <p>Email : @CurrentContact.Email</p>
-    <p>Phone : @CurrentContact.Phone</p>
+    <div class="detail-container">
+        <p>Name : @CurrentContact.Name</p>
+        <p>Email : @CurrentContact.Email</p>
+        <p>Phone : @CurrentContact.Phone</p>
+    </div>
 }
 else
 {
     <p>Loading Contact details...</p>
 }
 
-@code {
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Copyrite https://github.com/POLLESSI *@

@@ -17,8 +17,51 @@ namespace PortFolioPolLESSIRE0Blazor.Services
         {
             return await _httpClient.GetFromJsonAsync<List<CertificationModel>>("api/certifications");
         }
+        public async Task<CertificationModel> GetCertificationByIdAsync(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<CertificationModel>($"api/certifications/{id}");
+        }
+
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI
 
 

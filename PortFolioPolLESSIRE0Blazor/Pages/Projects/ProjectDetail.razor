@@ -1,20 +1,55 @@
-﻿@inherits ProjectDetail
-
-<h3>Project Detail</h3>
+﻿<h3>Project Detail</h3>
 
 @if (CurrentProject is not null)
 {
-    <p>Name : @CurrentProject.Name</p>
-    <p>Description : @CurrentProject.Description</p>
-    <p>Url : @CurrentProject.Url</p>
-    <p>StartDate : @CurrentProject.StartDate</p>
-    <p>EndDate : @CurrentProject.EndDate</p>
+    <div class="detail-container">
+        <p>Name : @CurrentProject.Name</p>
+        <p>Description : @CurrentProject.Description</p>
+        <p>Url : @CurrentProject.URL</p>
+        <p>StartDate : @CurrentProject.StartDate</p>
+        <p>EndDate : @CurrentProject.EndDate</p>
+    </div>
 }
 else
 {
     <p>Loading Project details...</p>
 }
 
-@code {
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Copyrite https://github.com/POLLESSI *@
+

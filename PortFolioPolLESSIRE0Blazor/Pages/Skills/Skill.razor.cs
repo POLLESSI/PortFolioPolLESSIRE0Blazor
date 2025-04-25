@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.SignalR.Client;
 using System.Text.Json.Serialization;
 using PortFolioPolLESSIRE0Blazor.Services;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Skills
 {
-    public partial class Skill : ComponentBase
+    public partial class Skill
     {
 #nullable disable
         [Inject]
@@ -40,3 +40,42 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace PortFolioPolLESSIRE0Blazor.Pages.Experiences
 {
-    public partial class ExperienceDetail : ComponentBase
+    public partial class ExperienceDetail
     {
     #nullable disable
         [Inject]
@@ -19,7 +19,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Experiences
         }
         private async Task GetExperiences()
         {
-            using (HttpResponseMessage message = await Client.GetAsync($"api/experience/{Id}"))
+            using (HttpResponseMessage message = await Client.GetAsync($"api/experiences/{Id}"))
             {
                 if (Id <= 0) return;
                 if (message.IsSuccessStatusCode)
@@ -31,3 +31,39 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Experiences
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

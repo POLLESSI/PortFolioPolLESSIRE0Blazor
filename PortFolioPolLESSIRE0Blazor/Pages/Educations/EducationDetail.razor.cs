@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Educations
 {
-    public partial class EducationDetail : ComponentBase
+    public partial class EducationDetail
     {
     #nullable disable
         [Inject]
@@ -19,7 +19,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
         private async Task GetEducations()
         {
-            using (HttpResponseMessage message = await Client.GetAsync($"api/education/{Id}"))
+            using (HttpResponseMessage message = await Client.GetAsync($"api/educations/{Id}"))
             {
                 if (Id <= 0) return;
                 if (message.IsSuccessStatusCode)
@@ -31,3 +31,36 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

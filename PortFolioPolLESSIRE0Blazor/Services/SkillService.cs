@@ -17,7 +17,59 @@ namespace PortFolioPolLESSIRE0Blazor.Services
         {
             return await _httpClient.GetFromJsonAsync<List<SkillModel>>("api/skills");
         }
+        public async Task<SkillModel> GetSkillByIdAsync(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<SkillModel>($"api/skills/{id}");
+        }
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI
 

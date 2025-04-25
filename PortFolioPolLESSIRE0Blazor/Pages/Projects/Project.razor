@@ -1,29 +1,123 @@
 ﻿@page "/project"
 @using PortFolioPolLESSIRE0Blazor.Models;
 
+<span class="fas fa-certificate me-2"></span> Projects
+
 <h3>Projects List</h3>
-@* <table class="table table-striped table-bordered">
-    <tr>
-        <th>Name</th>
-        <th></th>
-    </tr>
-    @foreach (ProjectModel ce in Projects)
-    {
-        <tr>
-            <td>@ce.Name</td>
-            <td><button class="btn btn-sm btm-outline-info" @onclick="() => ClickInfo(ce.Id)">Info</button></td>
-        </tr>
-    }
-</table> *@
+
+<div @ref="ScrollContainerRef" @onscroll="HandleScroll" style="height: 300px; overflow-y: auto; border: 1px solid #444;">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ProjectModel pr in Projects.Take(5))
+            {
+                <tr>
+                    <td>•</td>
+                    <td>@pr.Name</td>
+                    <td><button class="btn btn-sm btm-outline-info" @onclick="() => ClickInfo(pr.Id)">Info</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 
 <hr />
 
-@* @if(SelectedId > 0)
+@if(SelectedId > 0)
 {
-    <ProjectDetail id="SelectedId"></ProjectDetail>
+    <div class="draggable-container detail-wrapper">
+        <ProjectDetail id="SelectedId"></ProjectDetail>
+    </div>
 }
- *@
-<hr />
-@code {
 
+<hr />
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+
+@code {
+#nullable disable
+    private List<ProjectModel> allProjects = new(); // Tous les éléments
+    private List<ProjectModel> visibleProjects = new(); // Ceux à afficher
+    private int batchSize = 5;
+    private int currentIndex = 0;
+    private ElementReference ScrollContainerRef;
+
+    protected override void OnInitialized()
+    {
+        // Simule une source de données
+        for (int i = 1; i <= 50; i++)
+        {
+            allProjects.Add(new ProjectModel { Id = i, Name = $"Project {i}" });
+        }
+
+        LoadMoreItems();
+    }
+
+    private void LoadMoreItems()
+    {
+        var nextItems = allProjects.Skip(currentIndex).Take(batchSize);
+        visibleProjects.AddRange(nextItems);
+        currentIndex += batchSize;
+    }
+
+    private async Task HandleScroll()
+    {
+        var scrollTop = await JS.InvokeAsync<int>("getScrollTop", ScrollContainerRef);
+        var scrollHeight = await JS.InvokeAsync<int>("getScrollHeight", ScrollContainerRef);
+        var clientHeight = await JS.InvokeAsync<int>("getClientHeight", ScrollContainerRef);
+
+        if (scrollTop + clientHeight >= scrollHeight - 5)
+        {
+            if (currentIndex < allProjects.Count)
+            {
+                LoadMoreItems();
+                StateHasChanged();
+            }
+        }
+    }
+
+    [Inject]
+    private IJSRuntime JS { get; set; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Copyrite https://github.com/POLLESSI
+ *@

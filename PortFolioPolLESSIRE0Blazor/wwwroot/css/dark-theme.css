@@ -1,0 +1,60 @@
+﻿:root {
+    --lux-bg: #0d0f1c;
+    --lux-bg-glass: rgba(20, 20, 30, 0.6);
+    --lux-border: rgba(255, 255, 255, 0.1);
+    --lux-primary: #00fff7;
+    --lux-accent: #ff00ff;
+    --lux-gold: #f5d479;
+    --lux-text: #f0f0f0;
+    --lux-font-main: 'Inter', sans-serif;
+    --lux-font-headings: 'Libre Baskerville', serif;
+}
+
+body {
+    background: var(--lux-bg);
+    color: var(--lux-text);
+    font-family: var(--lux-font-main);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+:is(h1, h2, h3, h4) {
+    font-family: var(--lux-font-headings);
+    color: var(--lux-gold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.container-glass {
+    background: var(--lux-bg-glass);
+    border: 1px solid var(--lux-border);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+    .container-glass:hover {
+        box-shadow: 0 0 30px var(--lux-accent);
+    }
+
+a {
+    color: var(--lux-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: var(--lux-accent);
+    }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, var(--lux-primary), var(--lux-accent));
+    border-radius: 10px;
+}

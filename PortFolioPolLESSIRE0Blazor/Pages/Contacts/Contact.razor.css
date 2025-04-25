@@ -1,4 +1,102 @@
-﻿p {
-    background-color: orangered;
-    position: relative;
+﻿th {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
 }
+
+.table-wrapper {
+    display: block;
+    width: fit-content;
+    max-width: 80%;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    position: relative;
+    /* 👇 Scrolling vertical limité à hauteur du contenu (~5 lignes) */
+    max-height: 300px; /* Ajuste à la hauteur de 5 lignes environ */
+    overflow-y: auto;
+}
+
+    /* Stylise le scroll pour qu’il soit plus élégant */
+    .table-wrapper::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+.detail-wrapper {
+    width: fit-content;
+    max-width: 80%;
+    margin: 2rem auto;
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    position: relative;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+table {
+    min-width: 400px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.draggable-container {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Copyrite https://github.com/POLLESSI*/

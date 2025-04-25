@@ -1,41 +1,67 @@
-﻿h1 {
-    background-color: aqua;
+﻿/* privacy.razor.css */
+
+.privacy-container {
+    padding: 4rem 2rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: auto;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,255,247,0.05);
 }
 
-h3 {
-    background-color: orangered;
-    color: orange;
+.privacy-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--accent-color);
 }
 
-h4 {
+.privacy-content {
+    line-height: 1.8;
+    color: #ccc;
 }
 
-div {
-    background-color: rebeccapurple;
-    position: absolute;
-    top: auto;
-    bottom: auto;
-    left: 16%;
-    right: auto;
-    margin-left: 2%
+.privacy-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    background-color: #111;
+    border-radius: 12px;
 }
 
-    div h1 {
-        color: green;
-    }
 
-    div p {
-        background-color: orangered;
-        color: rebeccapurple;
-        padding: 4px 7px 2px 4px;
-    }
 
-        div p h2 {
-            color: firebrick;
-            padding: 4px 7px 2px 4px;
-        }
 
-        div p h3 {
-            color: darkgoldenrod;
-            padding: 4px 7px 2px 4px;
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Copyrite https://github.com/POLLESSI*/

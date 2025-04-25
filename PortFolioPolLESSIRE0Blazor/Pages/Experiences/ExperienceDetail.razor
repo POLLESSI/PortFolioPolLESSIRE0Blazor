@@ -1,14 +1,14 @@
-﻿@inherits ExperienceDetail
-
-<h3>Experience Detail</h3>
+﻿<h3>Experience Detail</h3>
 
 @if (CurrentExperience is not null)
 {
-    <p>Company : @CurrentExperience.Company</p>
-    <p>Position : @CurrentExperience.Position</p>
-    <p>Description : @CurrentExperience.Description</p>
-    <p>StartDate : @CurrentExperience.StartDate</p>
-    <p>EndDate : @CurrentExperience.EndDate</p>
+    <div class="detail-container">
+        <p>Company : @CurrentExperience.Company</p>
+        <p>Position : @CurrentExperience.Position</p>
+        <p>Description : @CurrentExperience.Description</p>
+        <p>StartDate : @CurrentExperience.StartDate</p>
+        <p>EndDate : @CurrentExperience.EndDate</p>
+    </div>
 }
 else
 {
@@ -18,3 +18,39 @@ else
 @code {
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Copyrite https://github.com/POLLESSI *@

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using System.Text.Json.Serialization;
 using PortFolioPolLESSIRE0Blazor.Services;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Languages
 {
     public partial class Language : ComponentBase
     {
@@ -40,3 +40,36 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

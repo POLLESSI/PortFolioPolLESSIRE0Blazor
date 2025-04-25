@@ -1,29 +1,118 @@
 ﻿@page "/contact"
 @using PortFolioPolLESSIRE0Blazor.Models;
 
+<span class="fas fa-certificate me-2"></span> Contacts
+
 <h3>Contacts List</h3>
-<table class="table table-striped table-bordered">
-    <tr>
-        <th>Name</th>
-        <th></th>
-    </tr>
-    @foreach (ContactModel ce in Contacts)
-    {
-        <tr>
-            <td>@ce.Name</td>
-            <td><button class="btn btn-sm btm-outline-info" @onclick="() => ClickInfo(ce.Id)">Info</button></td>
-        </tr>
-    }
-</table>
+<div @ref="ScrollContainerRef" @onscroll="HandleScroll" style="height: 300px; overflow-y: auto; border: 1px solid #444;">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ContactModel co in Contacts)
+            {
+                <tr>
+                    <td>•</td>
+                    <td>@co.Name</td>
+                    <td><button class="btn btn-sm btm-outline-info" @onclick="() => ClickInfo(co.Id)">Info</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <hr />
 
 @if(SelectedId > 0)
 {
-    <ContactDetail id="SelectedId"></ContactDetail>
+    <div class ="draggable-container detail-wrapper">
+        <ContactDetail id="SelectedId"></ContactDetail>
+    </div>
 }
 
 <hr />
-@code {
 
+<script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+
+@code {
+    #nullable disable
+
+    private List<ContactModel> allContacts = new(); // Tous les éléments
+    private List<ContactModel> visibleContacts = new(); // Ceux à afficher
+    private int batchSize = 5;
+    private int currentIndex = 0;
+    private ElementReference ScrollContainerRef;
+
+    protected override void OnInitialized()
+    {
+        // Simule une source de données
+        for (int i = 1; i <= 50; i++)
+        {
+            allContacts.Add(new ContactModel { Id = i, Name = $"Contact {i}" });
+        }
+
+        LoadMoreItems();
+    }
+
+    private void LoadMoreItems()
+    {
+        var nextItems = allContacts.Skip(currentIndex).Take(batchSize);
+        visibleContacts.AddRange(nextItems);
+        currentIndex += batchSize;
+    }
+
+    private async Task HandleScroll()
+    {
+        var scrollTop = await JS.InvokeAsync<int>("getScrollTop", ScrollContainerRef);
+        var scrollHeight = await JS.InvokeAsync<int>("getScrollHeight", ScrollContainerRef);
+        var clientHeight = await JS.InvokeAsync<int>("getClientHeight", ScrollContainerRef);
+
+        if (scrollTop + clientHeight >= scrollHeight - 5)
+        {
+            if (currentIndex < allContacts.Count)
+            {
+                LoadMoreItems();
+                StateHasChanged();
+            }
+        }
+    }
+
+    [Inject]
+    private IJSRuntime JS { get; set; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Copyrite https://github.com/POLLESSI *@
+

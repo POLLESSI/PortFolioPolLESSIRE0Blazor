@@ -38,3 +38,35 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Educations
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

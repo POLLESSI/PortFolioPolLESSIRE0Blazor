@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Interests
 {
-    public partial class InterestDetail : ComponentBase
+    public partial class InterestDetail
     {
     #nullable disable
         [Inject]
@@ -20,7 +20,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         private async Task GetInterests()
         {
             if (Id <= 0) return;
-            using (HttpResponseMessage message = await Client.GetAsync($"interest/{Id}"))
+            using (HttpResponseMessage message = await Client.GetAsync($"interests/{Id}"))
             {
                 if (message.IsSuccessStatusCode)
                 {
@@ -31,3 +31,38 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

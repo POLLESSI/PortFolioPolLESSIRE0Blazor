@@ -1,18 +1,51 @@
-﻿@inherits SkillDetail
-
-<h3>Skill Detail</h3>
+﻿<h3>Skill Detail</h3>
 
 @if (CurrentSkill is not null)
 {
-    <p>Name : @CurrentSkill.Name</p>
-    <p>Level : @CurrentSkill.Level</p>
-    <p>Description : @CurrentSkill.Description</p>
+    <div class="detail-container">
+        <p>Name : @CurrentSkill.Name</p>
+        <p>Level : @CurrentSkill.Level</p>
+        <p>Description : @CurrentSkill.Description</p>
+    </div>
+    
 }
 else
 {
     <p>Loading Skill details...</p>
 }
 
-@code {
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Copyrite https://github.com/POLLESSI *@

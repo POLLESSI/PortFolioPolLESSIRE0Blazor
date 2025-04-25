@@ -1,4 +1,77 @@
-﻿p {
-    background-color: orangered;
+﻿.detail-container {
+    width: fit-content;
+    max-width: 80%;
+    margin: 2rem auto;
+    background: rgba(54, 2, 12, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
     position: relative;
+    animation: fadeInDetail 0.6s ease-in-out;
 }
+
+    .detail-container p {
+        margin: 0.75rem 0;
+        padding: 0.5rem 1rem;
+        background: rgba(135, 206, 250, 0.1); /* skyblue très atténué */
+        border-left: 3px solid deepskyblue;
+        border-radius: 6px;
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+        .detail-container p:hover {
+            background-color: rgba(135, 206, 250, 0.2);
+            transform: scale(1.01);
+        }
+
+/* Animation d’apparition */
+@keyframes fadeInDetail {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Copyrite https://github.com/POLLESSI*/

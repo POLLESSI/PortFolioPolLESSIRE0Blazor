@@ -17,6 +17,48 @@ namespace PortFolioPolLESSIRE0Blazor.Services
         {
             return await _httpClient.GetFromJsonAsync<List<ExperienceModel>>("api/experiences");
         }
+        public async Task<ExperienceModel> GetExperienceByIdAsync(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<ExperienceModel>($"api/experiences/{id}");
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI
 

@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+namespace PortFolioPolLESSIRE0Blazor.Pages.Languages
 {
-    public partial class LanguageDetail : ComponentBase
+    public partial class LanguageDetail
     {
     #nullable disable
         [Inject]
@@ -20,7 +20,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         private async Task GetLanguages()
         {
             if (Id <= 0) return;
-            using (HttpResponseMessage message = await Client.GetAsync($"api/language/{Id}"))
+            using (HttpResponseMessage message = await Client.GetAsync($"api/languages/{Id}"))
             {
                 if (message.IsSuccessStatusCode)
                 {
@@ -31,3 +31,35 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

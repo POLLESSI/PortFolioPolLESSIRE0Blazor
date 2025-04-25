@@ -1,13 +1,14 @@
 ﻿using PortFolioPolLESSIRE0Blazor.Models;
+using PortFolioPolLESSIRE0Blazor.Services;
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.SignalR.Client;
 using System.Text.Json.Serialization;
-using PortFolioPolLESSIRE0Blazor.Services;
 
-namespace PortFolioPolLESSIRE0Blazor.Pages
+
+namespace PortFolioPolLESSIRE0Blazor.Pages.Experiences
 {
-    public partial class Experience : ComponentBase
+    public partial class Experience
     {
 #nullable disable
         [Inject]
@@ -30,13 +31,48 @@ namespace PortFolioPolLESSIRE0Blazor.Pages
             hubConnection.On("notifynewexperience", async () =>
             {
                 Experiences = await ExperienceService.GetExperiencesAsync();
-                StateHasChanged();
             });
 
             await hubConnection.StartAsync();
         }
 
-        private void ClickInfo(int id) => SelectedId = id;
-        
+        private void ClickInfo(int id)
+        {
+            SelectedId = id;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI

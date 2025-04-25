@@ -1,25 +1,58 @@
-﻿@* @inherits CertificationDetail *@
-@page "/certification/{Id:int}"
-
-<h3>Certification Detail</h3>
+﻿<h3>Certification Detail</h3>
 
 @if (CurrentCertification is not null)
 {
-    <p>Name : @Currentcertification.Name</p>
-    <p>Authority : @Currentcertification.Authority</p>
-    <p>License Number : @Currentcertification.Licencenumber</p>
-    <p>URL : @Currentcertification.Url</p>
-    <p>Date : @Currentcertification.Dates</p>
+    <div class="detail-container bordeaux-background">
+        <p>Name : @CurrentCertification.Name</p>
+        <p>Authority : @CurrentCertification.Authority</p>
+        <p>License Number : @CurrentCertification.LicenceNumber</p>
+        <p>URL : @CurrentCertification.Url</p>
+        <p>Date : @CurrentCertification.LicenceDate</p>
+    </div>
 }
 else
 {
     <p>Loading Certification details...</p>
 }
-@foreach (var cert in Certifications)
-{
-    <p><a href="/certification/@cert.Id">@cert.Name</a></p>
-}
 
-@code {
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* //Copyrite https://github.com/POLLESSI *@

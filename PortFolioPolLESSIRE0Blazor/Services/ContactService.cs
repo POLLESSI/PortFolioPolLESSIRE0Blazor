@@ -17,7 +17,48 @@ namespace PortFolioPolLESSIRE0Blazor.Services
         {
             return await _httpClient.GetFromJsonAsync<List<ContactModel>>("api/contacts");
         }
+        public async Task<ContactModel> GetContactByIdAsync(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<ContactModel>($"api/contacts/{id}");
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Copyrite https://github.com/POLLESSI
 
 
