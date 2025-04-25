@@ -11,10 +11,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Languages
     {
 #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  
         [Inject] public LanguageService LanguageService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
-
+        [Inject] public NavigationManager Navigation { get; set; } 
         public List<LanguageModel> Languages { get; set; } = new();
         public int SelectedId { get; set; }
         public HubConnection hubConnection { get; set; }
@@ -24,7 +23,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Languages
             Languages = await LanguageService.GetLanguagesAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/languageHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/languageHub")) 
                 .Build();
 
             hubConnection.On("notifynewlanguage", async () =>

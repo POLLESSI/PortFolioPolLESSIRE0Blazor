@@ -16,7 +16,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     cursor: move;
     position: relative;
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: auto;
 }
 

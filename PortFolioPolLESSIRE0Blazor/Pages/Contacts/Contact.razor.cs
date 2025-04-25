@@ -11,9 +11,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Contacts
     {
     #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  // Injection HttpClient
         [Inject] public ContactService ContactService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<ContactModel> Contacts { get; set; } = new();
         public int SelectedId { get; set; }
@@ -24,7 +24,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Contacts
             Contacts = await ContactService.GetContactsAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/contactHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/contactHub")) 
                 .Build();
 
             hubConnection.On("notifynewcontact", async () =>

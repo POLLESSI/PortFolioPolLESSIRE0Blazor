@@ -42,15 +42,14 @@
 
 @code {
 #nullable disable
-    private List<SkillModel> allSkills = new(); // Tous les éléments
-    private List<SkillModel> visibleSkills = new(); // Ceux à afficher
+    private List<SkillModel> allSkills = new(); 
+    private List<SkillModel> visibleSkills = new(); 
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
         for (int i = 1; i <= 50; i++)
         {
             allSkills.Add(new SkillModel { Id = i, Name = $"Skill {i}" });

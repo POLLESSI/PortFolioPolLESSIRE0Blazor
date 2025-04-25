@@ -41,15 +41,14 @@
 
 @code {
 #nullable disable
-    private List<ExperienceModel> allExperiences = new(); // Tous les éléments
-    private List<ExperienceModel> visibleExperiences = new(); // Ceux à afficher
+    private List<ExperienceModel> allExperiences = new(); 
+    private List<ExperienceModel> visibleExperiences = new(); 
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
         for (int i = 1; i <= 50; i++)
         {
             allExperiences.Add(new ExperienceModel { Id = i, Company = $"Experience {i}" });

@@ -11,7 +11,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Educations
     {
 #nullable disable
         [Inject] public EducationService EducationService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<EducationModel> Educations { get; set; } = new();
         public int SelectedId { get; set; }
@@ -22,7 +22,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Educations
             Educations = await EducationService.GetEducationsAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/educationHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/educationHub")) 
                 .Build();
 
             hubConnection.On("notifyneweducation", async () =>

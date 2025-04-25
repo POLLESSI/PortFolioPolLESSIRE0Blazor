@@ -42,15 +42,14 @@
 
 @code {
     #nullable disable
-    private List<EducationModel> allEducations = new(); // Tous les éléments
-    private List<EducationModel> visibleEducations = new(); // Ceux à afficher
+    private List<EducationModel> allEducations = new(); 
+    private List<EducationModel> visibleEducations = new(); 
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
         for (int i = 1; i <= 50; i++)
         {
             allEducations.Add(new EducationModel { Id = i, School = $"Education {i}" });

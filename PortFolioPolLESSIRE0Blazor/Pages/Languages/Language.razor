@@ -42,15 +42,14 @@
 
 @code {
 #nullable disable
-    private List<LanguageModel> allLanguages = new(); // Tous les éléments
-    private List<LanguageModel> visibleLanguages = new(); // Ceux à afficher
+    private List<LanguageModel> allLanguages = new(); 
+    private List<LanguageModel> visibleLanguages = new(); 
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
         for (int i = 1; i <= 50; i++)
         {
             allLanguages.Add(new LanguageModel { Id = i, Name = $"Language {i}" });

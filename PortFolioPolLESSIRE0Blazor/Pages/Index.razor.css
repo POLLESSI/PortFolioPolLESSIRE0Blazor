@@ -1,6 +1,6 @@
 ﻿/* index.razor.css */
 
-/* Applique à la page d'accueil une mise en valeur néon élégante */
+/* Apply a stylish neon highlight to the homepage */
 .index-hero {
     background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
     text-align: center;
@@ -80,44 +80,16 @@ footer {
 .noise-overlay {
     position: absolute;
     inset: 0;
-    background-image: url('/images/noise-texture.png'); /* ou SVG animé en CSS */
+    background-image: url('/images/noise-texture.png'); /* or animated SVG in CSS */
     opacity: 0.04;
     pointer-events: none;
     mix-blend-mode: overlay;
 }
 
 
-/*.svg-background svg {
-    animation: hueShift 20s linear infinite;
-    filter: hue-rotate(0deg);
-}*/
 
-/*@keyframes hueShift {
-    0% {
-        filter: hue-rotate(0deg);
-    }
 
-    100% {
-        filter: hue-rotate(360deg);
-    }
-}*/
-/*Ne fait pas de demi-tour à label fin de sont cycle*/
-
-/*@keyframes walk {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(500px);
-    }
-}
-
-.figurine {
-    animation: walk 5s linear infinite;
-}*/
-
-/*Tourne center continu comme une planette*/
+/*Rotates center continuously like a planet*/
 
 @keyframes rotate {
     from {

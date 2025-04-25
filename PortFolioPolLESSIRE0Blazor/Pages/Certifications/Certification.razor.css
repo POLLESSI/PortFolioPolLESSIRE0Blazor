@@ -18,12 +18,12 @@
     cursor: grab;
     position: absolute;
     transition: transform 0.1s ease;
-    /* 👇 Scrolling vertical limité à hauteur du contenu (~5 lignes) */
-    max-height: 300px; /* Ajuste à la hauteur de 5 lignes environ */
+    /* 👇 Vertical scrolling limited to content height (~5 lines) */
+    max-height: 200px; /* Adjusts to about 5 lines high */
     overflow-y: auto;
 }
 
-    /* Stylise le scroll pour qu’il soit plus élégant */
+    /* Style the scroll to make it more elegant */
     .table-wrapper::-webkit-scrollbar {
         width: 8px;
     }

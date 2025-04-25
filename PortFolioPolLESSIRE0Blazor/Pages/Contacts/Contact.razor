@@ -41,15 +41,14 @@
 @code {
     #nullable disable
 
-    private List<ContactModel> allContacts = new(); // Tous les éléments
-    private List<ContactModel> visibleContacts = new(); // Ceux à afficher
+    private List<ContactModel> allContacts = new(); 
+    private List<ContactModel> visibleContacts = new(); 
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
         for (int i = 1; i <= 50; i++)
         {
             allContacts.Add(new ContactModel { Id = i, Name = $"Contact {i}" });

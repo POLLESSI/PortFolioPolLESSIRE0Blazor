@@ -42,15 +42,14 @@
 
 @code {
 #nullable disable
-    private List<ProjectModel> allProjects = new(); // Tous les éléments
-    private List<ProjectModel> visibleProjects = new(); // Ceux à afficher
+    private List<ProjectModel> allProjects = new(); 
+    private List<ProjectModel> visibleProjects = new(); 
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
         for (int i = 1; i <= 50; i++)
         {
             allProjects.Add(new ProjectModel { Id = i, Name = $"Project {i}" });

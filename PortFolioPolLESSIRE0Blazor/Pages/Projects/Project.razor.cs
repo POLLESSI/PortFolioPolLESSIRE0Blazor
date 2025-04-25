@@ -11,9 +11,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Projects
     {
 #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  
         [Inject] public ProjectService ProjectService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<ProjectModel> Projects { get; set; } = new();
         public int SelectedId { get; set; }
@@ -24,7 +24,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Projects
             Projects = await ProjectService.GetProjectsAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/projectHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/projectHub")) 
                 .Build();
 
             hubConnection.On("notifynewproject", async () =>

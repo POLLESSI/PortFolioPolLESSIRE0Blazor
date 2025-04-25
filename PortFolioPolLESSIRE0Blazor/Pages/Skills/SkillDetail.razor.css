@@ -15,7 +15,7 @@
     .detail-container p {
         margin: 0.75rem 0;
         padding: 0.5rem 1rem;
-        background: rgba(135, 206, 250, 0.1); /* skyblue très atténué */
+        background: rgba(135, 206, 250, 0.1); 
         border-left: 3px solid deepskyblue;
         border-radius: 6px;
         transition: transform 0.2s ease, background-color 0.3s ease;
@@ -26,7 +26,6 @@
             transform: scale(1.01);
         }
 
-/* Animation d’apparition */
 @keyframes fadeInDetail {
     from {
         opacity: 0;

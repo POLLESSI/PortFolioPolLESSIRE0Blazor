@@ -11,9 +11,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Interests
     {
     #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  
         [Inject] public InterestService InterestService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<InterestModel> Interests { get; set; } = new();
         public int SelectedId { get; set; }
@@ -24,7 +24,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Interests
             Interests = await InterestService.GetInterestsAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/interestHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/interestHub")) 
                 .Build();
 
             hubConnection.On("notifynewinterest", async () =>

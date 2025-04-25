@@ -4,7 +4,7 @@
 
 /* NavMenu.razor.css */
 :host {
-    background-image: url('/images/background.jpg'); /* ou une autre image */
+    background-image: url('/images/background.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,14 +138,14 @@
         display: block;
     }
 }
-/* Réinitialisation de base */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Bouton Hamburger */
+/* Hamburger Button */
 .menu-toggle {
     display: none;
 }
@@ -172,7 +172,7 @@
         transition: all 0.3s ease;
     }
 
-/* Animation du bouton Hamburger */
+/* Hamburger Button Animation */
 .menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(0.35rem, 0.35rem);
 }

@@ -11,9 +11,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Certifications
     {
 #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  // Injection HttpClient
         [Inject] public CertificationService CertificationService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<CertificationModel> Certifications { get; set; } = new();
         public int SelectedId { get; set; }
@@ -24,7 +24,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Certifications
             Certifications = await CertificationService.GetCertificationsAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/certificationHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/certificationHub")) 
                 .Build();
 
             hubConnection.On("notifynewcertification", async () =>

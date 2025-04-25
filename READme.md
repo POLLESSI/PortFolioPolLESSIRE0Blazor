@@ -1,50 +1,58 @@
-﻿# 🎯 Portfolio Développeur .NET & Cybersécurité
+﻿# 🎯 .NET & Cybersecurity Developer Portfolio
 
-Bienvenue sur mon portfolio professionnel développé en **Blazor WebAssembly**, combinant mes compétences en développement .NET, cybersécurité, architecture logicielle et design web.
+Welcome to my professional portfolio developed in **Blazor WebAssembly**, combining my skills in .NET development, cybersecurity, software architecture and web design.
 
 ---
 
-## 🚀 À propos
+## 🚀 About
 
-💼 **Nom** : Pol LESSIRE  
-🎓 **Formation** : Architecte Logiciel + Full Stack .NET Développeur Junior orienté Cybersécurité
-🔐 **Spécialité** : Développeur .NET C# Junior & Cybersécurité  
-🌍 **Technos principales** : .NET 6, Blazor, Angular CLI, Node.js  
+💼 **Name**: Pol LESSIRE  
+🎓 **Training**: Software Architect + Full Stack .NET Junior Developer focused on Cybersecurity
+🔐 **Specialty**: Junior .NET C# Developer & Cybersecurity  
+🌍 **Main technologies**: .NET 6, Blazor, Angular CLI, Node.js  
 📦 **Stack** : ADO.NET, SignalR, Dapper, Leaflet, JSInterop, GitHub Actions  
-🎨 **UI/UX** : Responsive Design, Dark Mode Luxe, SVG animés, Parallax, Scroll animé
+🎨 **UI/UX**: Responsive Design, Dark Mode Luxe, Animated SVG, Parallax, Animated Scroll
 
 ---
 
-## 🧩 Contenu du Portfolio
+## 🧩 Portfolio Content
 
-- 🧾 **Page d'accueil** : Vue d'ensemble immersive avec fond SVG animé, parallax et menu responsive.
-- 🎓 **Certifications** : Affichage dynamique de mes certifications, avec chargement progressif au scroll.
-- 🧩 **Projets** : Présentation de projets concrets avec contexte, technos et défis techniques.
-- 🌍 **Compétences** : Langages, frameworks, outils de cybersécurité.
-- 📜 **Langues** et **Intérêts** : Pour mieux cerner mon profil.
+- 🧾 **Homepage**: Immersive overview with animated SVG background, parallax and responsive menu.
+- 🎓 **Certifications**: Dynamic display of my certifications, with progressive loading on scroll.
+- 🧩 **Projects**: Presentation of concrete projects with context, technologies and technical challenges.
+- 🌍 **Skills**: Languages, frameworks, cybersecurity tools.
+- 📜 **Languages**: French: Native Language, English: Conversational and Computer, Dutch: Conversational, C#, .NET, JavaScript, SQL, Python, VBA, Assembler, ...
+_ 🌍 **Interests**: Geology, Astronomy, Computer Science, Cybersecurity, Mechanics, 3D Creation, Victim Assistance...
+---
+
+## 🔧 Technical features
+
+- ⚙️ **Real-time SignalR**: Live synchronization of weather data and tourist alternatives.
+- ☁️ **AI Integration (GPT-4)**: Automatic recommendations based on weather, traffic, and crowds.
+- 💾 **Database**: Optimized access via ADO.NET & Dapper.
+- 🌐 **WebAssembly (WASM)**: High-performance client-side Blazor application.
 
 ---
 
-## 🔧 Fonctionnalités techniques
+## 🚀 Deployment
 
-- ⚙️ **SignalR temps réel** : Synchronisation en direct des données météo et alternatives touristiques.
-- ☁️ **Intégration IA (GPT-4)** : Recommandations automatiques selon la météo, la circulation, et l'affluence.
-- 💾 **Base de données** : Accès optimisé via ADO.NET & Dapper.
-- 🌐 **WebAssembly (WASM)** : Application Blazor côté client performante.
-
----
-
-## 🚀 Déploiement
-
-Ce portfolio est hébergé gratuitement sur [GitHub Pages / Azure Static Web Apps / Netlify - à adapter selon ton choix], accessible ici :  
+This portfolio is hosted for free on [GitHub Pages / Azure Static Web Apps / Netlify - adapt as you wish], accessible here:
 👉 **[Lien vers le site en ligne]**
 
 ---
 
-## 🛠️ Comment l'exécuter en local
+## 🛠️ How to run it locally
 
 ```bash
 git clone https://github.com/ton-utilisateur/mon-portfolio-blazor.git
-cd mon-portfolio-blazor
+cd my-blazor-portfolio
 dotnet build
 dotnet run
+
+🤝 Contact
+📫 Email : lessirepol@gmail.com
+🔗 LinkedIn : https://www.linkedin.com/in/pol-lessire-bb3746135/
+
+
+
+

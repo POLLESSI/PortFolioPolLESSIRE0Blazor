@@ -12,9 +12,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Experiences
     {
 #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  
         [Inject] public ExperienceService ExperienceService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<ExperienceModel> Experiences { get; set; } = new();
         public int SelectedId { get; set; }

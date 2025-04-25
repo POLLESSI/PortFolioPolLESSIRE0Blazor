@@ -1,0 +1,47 @@
+﻿---
+
+## 🧾 2. **Description LinkedIn à copier-coller pour ton profil**
+
+> 🎯 Junior .NET C# developer passionate about cybersecurity, I designed this portfolio 100% in Blazor WebAssembly to demonstrate my know-how: responsive design, advanced animations (SVG, parallax, scroll), real-time SignalR integration, AI with GPT, and optimized back-end architecture with ADO.NET and Dapper.
+>  
+> 🌐 The portfolio can be viewed online here : [ton-lien].  
+>  
+> 🔍 Do not hesitate to contact me for any collaboration or professional opportunity!
+
+---
+
+## 🔁 3. **Automatiser la publication avec GitHub Actions (Blazor WASM)**
+
+### Étapes :
+
+1. **Créer un fichier GitHub Actions** : `.github/workflows/deploy.yml`
+2. **Exemple pour GitHub Pages** :
+
+```yaml
+name: Deploy Blazor WASM to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Publish Blazor WASM
+        run: dotnet publish PortFolioPolLESSIRE0Blazor/PortFolioPolLESSIRE0Blazor.csproj -c Release -o release --nologo
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./release/wwwroot

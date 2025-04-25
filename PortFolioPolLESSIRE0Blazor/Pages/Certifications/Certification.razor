@@ -45,15 +45,15 @@
 
 @code {
     #nullable disable
-    private List<CertificationModel> allCertifications = new(); // Tous les éléments
-    private List<CertificationModel> visibleCertifications = new(); // Ceux à afficher
+    private List<CertificationModel> allCertifications = new(); // All elements
+    private List<CertificationModel> visibleCertifications = new(); // Those to display
     private int batchSize = 5;
     private int currentIndex = 0;
     private ElementReference ScrollContainerRef;
 
     protected override void OnInitialized()
     {
-        // Simule une source de données
+        // Simulates a data source
         for (int i = 1; i <= 50; i++)
         {
             allCertifications.Add(new CertificationModel { Id = i, Name = $"Certification {i}" });

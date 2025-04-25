@@ -156,24 +156,6 @@ td {
     background-color: var(--dark-card);
     color: var(--dark-text);
 }
-/*.svg-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-    perspective: 1000px;
-}
-
-.svg-background svg {
-    width: 110%;
-    height: 110%;
-    transition: transform 0.1s ease-out;
-    transform-origin: center;
-    will-change: transform;
-}*/
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -378,6 +360,84 @@ td {
     z-index: -1;
     pointer-events: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11,9 +11,9 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Skills
     {
 #nullable disable
         [Inject]
-        public HttpClient Client { get; set; }  // Injection du HttpClient
+        public HttpClient Client { get; set; }  
         [Inject] public SkillService SkillService { get; set; }
-        [Inject] public NavigationManager Navigation { get; set; } // Utile si besoin de naviguer
+        [Inject] public NavigationManager Navigation { get; set; } 
 
         public List<SkillModel> Skills { get; set; } = new();
         public int SelectedId { get; set; }
@@ -24,7 +24,7 @@ namespace PortFolioPolLESSIRE0Blazor.Pages.Skills
             Skills = await SkillService.GetSkillsAsync();
 
             hubConnection = new HubConnectionBuilder()
-                .WithUrl(new Uri("https://localhost:7109/hubs/skillHub")) // Correction de l'URL du Hub
+                .WithUrl(new Uri("https://localhost:7109/hubs/skillHub")) 
                 .Build();
 
             hubConnection.On("notifynewskill", async () =>

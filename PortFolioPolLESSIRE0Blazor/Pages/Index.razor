@@ -13,12 +13,6 @@
     <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
         <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                @* <stop offset="0%" stop-color="#00fff7">
-                    <animate attributeName="stop-color" values="#00fff7;#ff00ff;#00fff7" dur="10s" repeatCount="indefinite" />
-                </stop>
-                <stop offset="100%" stop-color="#ff00ff">
-                    <animate attributeName="stop-color" values="#ff00ff;#00fff7;#ff00ff" dur="10s" repeatCount="indefinite" />
-                </stop> *@
                 <stop id="stop1" offset="0%" stop-color="#00fff7" />
                 <stop id="stop2" offset="100%" stop-color="#ff00ff" />
             </linearGradient>
@@ -43,7 +37,7 @@
         const stop1 = document.getElementById("stop1");
         const stop2 = document.getElementById("stop2");
 
-        // Couleur dynamique avec teinte
+        // Dynamic color with tint
         let hue = 0;
         setInterval(() => {
             hue = (hue + 1) % 360;
@@ -53,14 +47,14 @@
             stop2.setAttribute("stop-color", color2);
         }, 50);
 
-        // Parallax dynamique selon mouvement de souris
+        // Dynamic parallax based on mouse movement
         document.addEventListener("mousemove", (e) => {
             const x = (e.clientX / window.innerWidth - 0.5) * 20;
             const y = (e.clientY / window.innerHeight - 0.5) * 20;
             svg.style.transform = `rotateX(${y}deg) rotateY(${x}deg) scale(1.05)`;
         });
 
-        // On remet à zéro si souris disparait
+        // We reset if the mouse disappears
         document.addEventListener("mouseleave", () => {
             svg.style.transform = "rotateX(0deg) rotateY(0deg)";
         });
